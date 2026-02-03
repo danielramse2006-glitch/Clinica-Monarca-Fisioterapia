@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Monarca Fisio & Rehab",
+  "description": "Una plataforma premium de fisioterapia y rehabilitación con diseño moderno, oscuro y acentos en verde neón, inspirada en la marca Monarca.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
