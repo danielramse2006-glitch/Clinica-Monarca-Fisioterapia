@@ -27,7 +27,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
           <motion.img 
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            src="logos/logo1.jpg"
+            src="/logos/logo1.jpg"
             alt="Logo Monarca" 
             className="h-12 w-auto object-contain rounded-lg border border-neon/40 shadow-[0_0_15px_rgba(223,255,0,0.3)]" 
             onError={(e) => { 
