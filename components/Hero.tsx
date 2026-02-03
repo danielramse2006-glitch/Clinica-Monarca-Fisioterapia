@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
             className="p-1 bg-neon/5 rounded-3xl"
           >
             <img 
-              src="./logo.jpg" 
+              src="logos/logo1.jpg" 
               alt="Logo Monarca Principal" 
               className="w-52 md:w-80 h-auto rounded-2xl object-contain border-2 border-zinc-800/80 shadow-2xl" 
               onError={(e) => { 

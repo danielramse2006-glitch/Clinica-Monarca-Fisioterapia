@@ -89,7 +89,7 @@ const App: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut" 
           }}
-          src="./logo.jpg" 
+          src="logos/logo1.jpg"
           alt="Monarca Fondo" 
           className="w-[85%] max-w-5xl h-auto object-contain grayscale"
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
