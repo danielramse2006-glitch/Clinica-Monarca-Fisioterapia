@@ -9,7 +9,7 @@ interface PageTemplateProps {
 export const PageTemplate: React.FC<PageTemplateProps> = ({ name, onBack }) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-zinc-950 py-20">
-      <img src="/logos/logo1.jpg" alt="Logo" className="w-24 mb-10 opacity-50" />
+      <img src="https://i.ibb.co/fz8KcFwQ/logo1.jpg" alt="Logo" className="w-24 mb-10 opacity-50" />
       <h1 className="text-4xl md:text-7xl font-black italic text-neon mb-4 tracking-tighter">
         PÁGINA DE {name.toUpperCase()}
       </h1>

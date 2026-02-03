@@ -27,7 +27,7 @@ export const PackageDetail: React.FC<PackageDetailProps> = ({ title, id, onBack 
         </button>
 
         <div className="flex items-center space-x-6 mb-12">
-          <img src="logos/logo1.jpg" alt="Logo" className="w-20 h-20 rounded-full border border-neon" />
+          <img src="https://i.ibb.co/fz8KcFwQ/logo1.jpg" className="w-20 h-20 rounded-full border border-neon" />
           <h1 className="text-5xl md:text-8xl font-black italic uppercase leading-none tracking-tighter">
             {title} <br/><span className="text-neon">MONARCA</span>
           </h1>

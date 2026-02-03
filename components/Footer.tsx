@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <div className="flex items-center space-x-8">
             <motion.img 
               whileHover={{ rotate: 5, scale: 1.1 }}
-              src="logos/logo1.jpg" 
+              src="https://i.ibb.co/fz8KcFwQ/logo1.jpg" 
               alt="Logo Monarca" 
               className="h-24 w-auto rounded-xl grayscale hover:grayscale-0 transition-all duration-700 border border-zinc-800" 
               onError={(e) => { (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/monarca-footer/200/200'; }}
