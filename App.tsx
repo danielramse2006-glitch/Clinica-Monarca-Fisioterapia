@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
@@ -76,22 +75,26 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* MARCA DE AGUA - LOGO DE FONDO FIJO */}
+      {/* MARCA DE AGUA - LOGO DE FONDO FIJO CON PROPORCIONES CORRECTAS */}
       <div className="fixed inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
         <motion.img 
           initial={{ opacity: 0 }}
           animate={{ 
-            opacity: [0.03, 0.06, 0.03],
-            scale: [1, 1.05, 1]
+            opacity: [0.04, 0.08, 0.04],
+            scale: [1, 1.03, 1]
           }}
           transition={{ 
-            duration: 15, 
+            duration: 18, 
             repeat: Infinity,
             ease: "easeInOut" 
           }}
-          src="https://i.ibb.co/fz8KcFwQ/logo1.jpg"
+          src="imagenes/logo.jpg"
           alt="Monarca Fondo" 
-          className="w-[85%] max-w-5xl h-auto object-contain grayscale"
+          className="w-[70%] max-w-4xl h-auto object-contain opacity-[0.05]"
+          style={{ 
+            filter: 'grayscale(100%) brightness(1.2)',
+            aspectRatio: '517/217'
+          }}
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
         />
       </div>
