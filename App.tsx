@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
@@ -14,6 +15,9 @@ import { PackageDetail } from './components/PackageDetail.tsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export type PageType = 'inicio' | 'fisioterapia' | 'rehabilitacion' | 'quiropractica' | 'masajes' | 'paquete-quiro' | 'paquete-fisica' | 'paquete-masaje' | 'paquete-premium';
+
+// URL del logo principal y fondo
+const LOGO_URL = "https://i.ibb.co/WWFfSFv1/logo.jpg";
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<PageType>('inicio');
@@ -75,33 +79,31 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* MARCA DE AGUA - LOGO DE FONDO FIJO CON PROPORCIONES CORRECTAS */}
-      <div className="fixed inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
-        <motion.img 
-          initial={{ opacity: 0 }}
-          animate={{ 
-            opacity: [0.04, 0.08, 0.04],
-            scale: [1, 1.03, 1]
-          }}
-          transition={{ 
-            duration: 18, 
-            repeat: Infinity,
-            ease: "easeInOut" 
-          }}
-          src="imagenes/logo.jpg"
-          alt="Monarca Fondo" 
-          className="w-[70%] max-w-4xl h-auto object-contain opacity-[0.05]"
+      {/* 
+          MARCA DE AGUA DEL FONDO - TAMAÑO SOLICITADO: 241px
+          Se ajustó para que sea un detalle elegante y proporcional.
+      */}
+      <div className="fixed inset-0 z-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+        <img 
+          src={LOGO_URL} 
+          alt="Monarca Marca de Agua" 
           style={{ 
-            filter: 'grayscale(100%) brightness(1.2)',
-            aspectRatio: '517/217'
+            width: '241px', 
+            height: 'auto',
+            minWidth: '241px',
+            maxWidth: '241px'
           }}
-          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+          className="grayscale opacity-[0.12] brightness-110 drop-shadow-[0_0_40px_rgba(223,255,0,0.05)] object-contain"
+          onError={(e) => { 
+            const img = e.target as HTMLImageElement;
+            img.style.display = 'none';
+          }}
         />
       </div>
 
       <Navbar onNavigate={(p) => setCurrentPage(p as PageType)} currentPage={currentPage} />
       
-      <main className="pt-20 relative z-10">
+      <main className="pt-24 relative z-10">
         <AnimatePresence mode="wait">
           {renderContent()}
         </AnimatePresence>
@@ -113,5 +115,3 @@ const App: React.FC = () => {
     </div>
   );
 };
-
-export default App;
