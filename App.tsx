@@ -17,7 +17,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 export type PageType = 'inicio' | 'fisioterapia' | 'rehabilitacion' | 'quiropractica' | 'masajes' | 'paquete-quiro' | 'paquete-fisica' | 'paquete-masaje' | 'paquete-premium';
 
 // URL del logo principal y fondo
-const LOGO_URL = "https://i.ibb.co/WWFfSFv1/logo.jpg";
+const LOGO_URL = "https://ibb.co/n881Yrk2/logo.jpg";
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<PageType>('inicio');
